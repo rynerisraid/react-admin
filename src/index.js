@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import theme from '@rebass/preset';
+import { useTheme, ThemeProvider, withTheme } from '@emotion/react';
+import './style/common.css'
+import Router from './router'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Router />,
+    // <ThemeProvider theme={theme}>
+    //   <Router />
+    // </ThemeProvider>,
   document.getElementById('root')
 );
 

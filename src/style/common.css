@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+}
+
+.nav-left{
+    width: 15%;
+    min-width: 180px;
+    height: calc(100vh);
+    background-color: azure;
+}
+
+.main{
+    flex:1;
+    height: calc(100vh);
+    background-color: moccasin;
+}
+
+.content{
+    position: relative;
+    padding: 20px;
+    background-color: cadetblue;
+}
