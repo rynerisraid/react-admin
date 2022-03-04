@@ -1,5 +1,5 @@
 import React from "react";
-import {Row, Col} from "antd";
+
 
 export default class Header extends React.Component{
     
@@ -8,7 +8,7 @@ export default class Header extends React.Component{
     render(){
         return (
             <div>
-               <Row className="header-top">
+               {/* <Row className="header-top">
                    <Col span={24}>
                        <span>欢迎{this.state.username}登录系统</span>
                    </Col>
@@ -18,7 +18,7 @@ export default class Header extends React.Component{
                    <Col span={20} className="header-date">
                        <span>2022-02-27</span>
                    </Col>
-               </Row>
+               </Row> */}
             </div>
         )
     }

@@ -1,18 +1,10 @@
-import React, { Children } from "react";
-import { Menu, Button } from 'antd';
+import React from "react";
+import { Menu,MenuItem } from "@blueprintjs/core";
 import {
-  AppstoreOutlined,
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-  PieChartOutlined,
-  DesktopOutlined,
-  ContainerOutlined,
-  MailOutlined,
-} from '@ant-design/icons';
+    Route,
+    Link
+  } from 'react-router-dom';
 
-
-
-const { SubMenu } = Menu;
 
 export default class NavLeft extends React.Component{
     
@@ -87,16 +79,16 @@ export default class NavLeft extends React.Component{
         return data.map((item)=>{
             if(item.children){
                 return (
-                    <SubMenu title={item.title} key={item.id}>
+                    <Menu title={item.title} key={item.id}>
                         {this.createMenu(item.children)}
-                    </SubMenu>
+                    </Menu>
                 );
             }
 
             return (
-                <Menu.Item title={item.title} key={item.id}>
+                <MenuItem  title={item.title} key={item.id}>
                     {item.title}
-                </Menu.Item>
+                </MenuItem >
             );
 
         })
@@ -105,23 +97,16 @@ export default class NavLeft extends React.Component{
     render() {
         return (
           <div style={{ width: 256 }}>
-              
-            {/* <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>
-              {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
-            </Button> */}
-            <Menu
-              defaultSelectedKeys={['1']}
-              defaultOpenKeys={['sub2']}
-              mode="inline"
-              theme={this.state.theme}
-              inlineCollapsed={this.state.collapsed}
-            >
-                {this.state.menuTree}
-              {/* <SubMenu key="sub2" icon={<AppstoreOutlined />} title="Navigation Two">
-                <Menu.Item key="9">Option 9</Menu.Item>
-                <Menu.Item key="10">Option 10</Menu.Item>
-              </SubMenu> */}
-            </Menu>
+            		
+                <li style={{display:this.props.isLogin?"none":"block"}}>
+                    <Link to="/login">Login</Link>
+                </li>
+                <li>
+                    <Link to="/admin/home">Home</Link>
+                </li>
+                <li>
+                    <Link to="/admin/about">About</Link>
+                </li>
           </div>
         );
       }

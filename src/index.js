@@ -1,18 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import theme from '@rebass/preset';
-import { useTheme, ThemeProvider, withTheme } from '@emotion/react';
-import './style/common.css'
-import Router from './router'
-
+import './style/common.css';
+import App from './App';
+import { BrowserRouter } from "react-router-dom";
 ReactDOM.render(
-    <Router />,
-    // <ThemeProvider theme={theme}>
-    //   <Router />
-    // </ThemeProvider>,
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
