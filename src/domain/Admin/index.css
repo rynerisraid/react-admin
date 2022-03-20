@@ -1,0 +1,38 @@
+.container {
+    display: block;
+}
+  
+
+.nav-left{
+    display: block;
+    z-index: 900;
+    position: fixed;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-box-shadow: 1px 0 20px 0 #3f4d67;
+            box-shadow: 1px 0 20px 0 #3f4d67;
+    width: 264px;
+    height: 100vh;
+    top: 0;
+    background: #3f4d67;
+    color: #a9b7d0;
+}
+
+.main-right{
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    clear: both;
+    float: unset;
+    right: 0;
+    margin-left: 264px;
+    min-height: 100vh;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.content{
+    position: relative;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}

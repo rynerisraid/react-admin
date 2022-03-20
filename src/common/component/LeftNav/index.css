@@ -1,0 +1,38 @@
+.side-panel {
+    position: absolute;
+    box-sizing: border-box;
+    overflow: auto;
+    top: 20;
+    left: 20;
+    margin: 0;
+    padding: 20px;
+    height: 100%;
+}
+
+.nav-logo {
+    height: 5vmin;
+    pointer-events: none;
+  }
+
+.nav-brand {
+    margin-left: 10px;
+    font-weight: 100;
+    color: #fff;
+    font-size: 18px;
+  }
+
+
+@media (prefers-reduced-motion: no-preference) {
+.nav-logo {
+    animation: App-logo-spin infinite 20s linear;
+}
+}
+
+@keyframes App-logo-spin {
+from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(360deg);
+}
+}
