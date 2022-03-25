@@ -4,6 +4,7 @@ import { Route,Routes} from 'react-router-dom';
 // import {WelcomeRoute} from './welcome';
 import {LoginRoute} from './login';
 import {AdminRoute} from './admin';
+import {ReduxDemoRoute} from './reduxDemo'
 
 export default class RouteConfig extends React.Component{
     render(){
@@ -14,6 +15,7 @@ export default class RouteConfig extends React.Component{
                 
                 {LoginRoute}
                 {AdminRoute}
+                {ReduxDemoRoute}
                 <Route path="*" element={<PageNotFound/>}></Route>
 
             </Routes>

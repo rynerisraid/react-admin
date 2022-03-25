@@ -4,6 +4,17 @@ import './index.css';
 import '../../../App.css';
 import logo from '../../../logo.svg';
 
+const RoutePath = {
+    path:'/',
+    name:'Login',
+    Chidlrens:[
+        { path:"dashboard", name:'Dashboard'},
+        { path:"welcome", name:'Welcome'},
+    ]
+}
+
+
+
 export default class LeftNav extends React.Component{
     render(){
         return(
@@ -24,6 +35,12 @@ export default class LeftNav extends React.Component{
                         </li>
                         <li>
                             <Link to="welcome">Weclome</Link>
+                        </li>
+                        <li>
+                            <Link to="counter">Counter</Link>
+                        </li>
+                        <li>
+                            <Link to="CounterNotRedux">CounterNotRedux</Link>
                         </li>
                     </ul>
                 
